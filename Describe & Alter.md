@@ -202,7 +202,7 @@ Delete the column family using deleteColumn() method. Pass the table name and th
 admin.deleteColumn("employee", "contactDetails"); 
 ```
 
-### Full code
+### Complete programm to delete a column family to an existing table
 
 ``` Java
 import java.io.IOException;
