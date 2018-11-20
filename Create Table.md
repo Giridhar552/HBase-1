@@ -2,7 +2,9 @@
 
 ### Creating a Table using HBase Shell
 
-  create '<table name>', '<column family>'
+``` HBase
+create '<table name>', '<column family>'
+```
 
 If we want to create a table named *emp* with two column families: *personal data* and *professional data*, then we should write:
 
