@@ -111,9 +111,7 @@ row1 column = personal:name, timestamp = 1418193806767, value = raju
 1 row(s) in 0.0830 seconds
 ```
 
-## Altering tables using the Java API
-
-### Adding a Column Family Using Java API
+## Adding a Column Family Using Java API
 
 It is possible to add a column family to a table using the method **addColumn()** of **HBAseAdmin** class. Follow the steps given below to add a column family to a table.
 
@@ -135,8 +133,7 @@ The **addColumn()** method requires a table name and an object of **HColumnDescr
 ``` Java
 // Instantiating columnDescriptor object
 
-HColumnDescriptor columnDescriptor = new
-HColumnDescriptor("contactDetails");
+HColumnDescriptor columnDescriptor = new HColumnDescriptor("contactDetails");
 ```
 
 ### Step 3
@@ -179,3 +176,57 @@ public class AddColoumn{
    }
 }
 ```
+
+## Deleting a Column Family using Java API
+
+You can delete a column family from a table using the method **deleteColumn()** of **HBAseAdmin** class. Follow the steps given below to add a column family to a table.
+
+### Step 1
+
+Instantiate the HBaseAdmin class
+
+``` Java
+// Instantiating configuration object
+Configuration conf = HBaseConfiguration.create();
+
+// Instantiating HBaseAdmin class
+HBaseAdmin admin = new HBaseAdmin(conf); 
+```
+
+### Step 2
+
+Delete the column family using deleteColumn() method. Pass the table name and the column family name as parameters to this method.
+
+``` Java
+// Deleting column family
+admin.deleteColumn("employee", "contactDetails"); 
+```
+
+### Full code
+
+``` Java
+import java.io.IOException;
+
+import org.apache.hadoop.conf.Configuration;
+
+import org.apache.hadoop.hbase.HBaseConfiguration;
+import org.apache.hadoop.hbase.MasterNotRunningException;
+import org.apache.hadoop.hbase.client.HBaseAdmin;
+
+public class DeleteColoumn{
+
+   public static void main(String args[]) throws MasterNotRunningException, IOException{
+
+      // Instantiating configuration class.
+      Configuration conf = HBaseConfiguration.create();
+
+      // Instantiating HBaseAdmin class.
+      HBaseAdmin admin = new HBaseAdmin(conf);
+
+      // Deleting a column family
+      admin.deleteColumn("employee","contactDetails");
+      System.out.println("coloumn deleted"); 
+   }
+}
+```
+
