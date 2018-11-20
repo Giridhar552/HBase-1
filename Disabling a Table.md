@@ -13,7 +13,7 @@ disable 'emp'
 
 ### Verification
 
-After disabling a table you can still sense its existence through ##list## and ##exists## commands. However you cannot scan it. For 
+After disabling a table you can still sense its existence through **list** and **exists** commands. However you cannot scan it. For 
 example:
 
 ``` Java
