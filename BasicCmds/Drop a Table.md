@@ -1,6 +1,6 @@
 # Dropping a Table
 
-##Dropping a Table using HBase shell
+## Dropping a Table using HBase shell
 
 Before dropping a table you need to disable it
 
