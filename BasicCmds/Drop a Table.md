@@ -91,14 +91,14 @@ HBaseAdmin admin = new HBaseAdmin(conf);
 Disable the table using the **disableTable()** method of the **HBaseAdmin** class.
 
 ``` Java
-admin.disableTable("emp1");
+admin.disableTable("emp2");
 ```
 
 ### Step 3
 Now delete the table using the **deleteTable()** method of the **HBaseAdmin** class.
 
 ``` Java
-admin.deleteTable("emp12");
+admin.deleteTable("emp2");
 ```
 
 ### Complete Java program to delete a table in HBase.
@@ -121,10 +121,10 @@ public class DeleteTable {
       HBaseAdmin admin = new HBaseAdmin(conf);
 
       // disabling table named emp
-      admin.disableTable("emp12");
+      admin.disableTable("emp2");
 
       // Deleting emp
-      admin.deleteTable("emp12");
+      admin.deleteTable("emp2");
       System.out.println("Table deleted");
    }
 }
