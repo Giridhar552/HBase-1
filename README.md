@@ -2,6 +2,10 @@
 
 1. [Creating a Table in HBase](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/Create%20Table.md)
 2. [Listing Tables in HBase](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/Listing%20Table.md)
+3. [Disabling a Table in HBase](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/Disabling%20a%20Table.md)
+4. [Enabling a Table in HBase](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/Enabling%20a%20Table.md)
+5. [Describe](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/Describe%20%26%20Alter.md)
+6. [Existence of Table](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/Exists.md)
 
 
 Other things
