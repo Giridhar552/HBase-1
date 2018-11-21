@@ -2,7 +2,9 @@
 
 The get command and the get() method of HTable class are used to read data from a table in HBase. Using get command, you can get a single row of data at a time. Its syntax is as follows:
 
-get ’<table name>’,’row1’
+``` Java
+get '<table name>','row1'
+```
 
 ### Reading a Specific Column
 
