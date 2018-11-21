@@ -11,7 +11,7 @@
 9.  [Inserting Data](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/BasicCmds/Inserting%20Data.md)
 10. [Updating Data](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/BasicCmds/Updating%20Data.md)
 11. [Reading Data](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/BasicCmds/Read%20Data.md)
-12. [Deleating Data](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/BasicCmds/Deleting%20Data.md)
+12. [Deleting Data](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/BasicCmds/Deleting%20Data.md)
 
 Other things
 1. [Creating and Inserting values into Table](https://github.com/ignacio-alorre/HBase_cheatsheet/blob/master/Creating%20and%20Inserting%20values%20into%20Table.md)
