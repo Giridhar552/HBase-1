@@ -31,8 +31,7 @@ hbase(main):007:0> put 'emp','1','professional data:salary','50000'
 ## Inserting Data using Java API
 
 You can insert data into Hbase using the **add()** method of the **Put** class. You can save it using the **put()** method of the 
-**HTable** class. These classes belong to the **org.apache.hadoop.hbase.client** package. Below given are the steps to create data 
-in a Table of HBase.
+**HTable** class. These classes belong to the **org.apache.hadoop.hbase.client** package. These are the steps to follow:
 
 ### Step 1: Instantiate the Configuration Class
 
