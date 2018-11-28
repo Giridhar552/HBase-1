@@ -139,4 +139,7 @@ Sources:
 
 https://dzone.com/articles/row-store-and-column-store-databases
 https://www.tutorialspoint.com/hbase/hbase_overview.htm
+https://www.ibm.com/support/knowledgecenter/en/SSCRJT_5.0.1/com.ibm.swg.im.bigsql.analyze.doc/doc/hbaseConcepts.html (Still to add information from here)
+
+
 
