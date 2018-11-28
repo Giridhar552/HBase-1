@@ -68,6 +68,29 @@ Shortly, they will have column families.
   that the queries you run are really suited to a columnar database.
 
 
+### Features of HBase
+
+* It is linearly scalable.
+* It has automatic failure support.
+* It provides consistent read and writes.
+* It integrates with Hadoop, both as a source and a destination.
+* It has easy java API for client.
+* It provides data replication across clusters.
+
+### Where to Use HBase
+
+* Apache HBase is used to have random, real-time read/write access to Big Data.
+* It hosts very large tables on top of clusters of commodity hardware.
+* Apache HBase is a non-relational database modeled after Google's Bigtable. Bigtable acts up on Google File System, likewise Apache HBase works on top of Hadoop and HDFS.
+
+### Applications of HBase
+
+* It is used whenever there is a need to write heavy applications.
+* HBase is used whenever we need to provide fast random access to available data.
+* Companies such as Facebook, Twitter, Yahoo, and Adobe use HBase internally.
+
+
+## Further information
 
 ### Data Storage example basic database.
 
@@ -99,24 +122,16 @@ in one file**, **all transaction_id data** is stored **in another file**, and so
 This provides some efficiencies when running queries against wide tables, since it is unlikely that a query needs to return all of the 
 fields in a single table. 
 
-In the **query** example **above**, we’d only need to **access the files that contained data** from the requested fields. You can **ignore 
-all other fields** that exist in the table. This ability to minimize i/o is one of the key reasons columnar databases can perform much 
+In the **query** example **above**, we’d only need to **access the files that contained data** from the requested fields. You can **ignore all other fields** that exist in the table. This ability to minimize i/o is one of the key reasons columnar databases can perform much 
 faster.
 
+### Normalization Versus Denormalization
 
+Many columnar databases prefer a **denormalized data structure**. In the example above, we have **two separate tables**: one for account information and one for transaction information. In many **columnar databases**, a **single table could represent this information instead of two separate tables**. With this denormalized design, when a query like the one presented is run, **no joins** would need to be processed in the columnar database, so the **query** will likely run **much faster**.
 
+The reason for **normalizing data** is that it **allows data to be written to the database in a highly efficient manner**. In our **row store example, we need to record just the relevant transaction details** whenever an existing customer makes a transaction. The account information does not need to be written along with the transaction data. Instead, we reference the account_number to gain access to all of the fields in the accounts table.
 
-
-Normalization Versus Denormalization
-Additionally, many columnar databases prefer a denormalized data structure. In the example above, we have two separate tables: one for account information and one for transaction information. In many columnar databases, a single table could represent this information. With this denormalized design, when a query like the one presented is run, no joins would need to be processed in the columnar database, so the query will likely run much faster.
-
-The reason for normalizing data is that it allows data to be written to the database in a highly efficient manner. In our row store example, we need to record just the relevant transaction details whenever an existing customer makes a transaction. The account information does not need to be written along with the transaction data. Instead, we reference the account_number to gain access to all of the fields in the accounts table.
-
-The place where a columnar database really shines is when we want to run a query that would, for example, determine the average price for a specific stock over a range of time. In the case of the columnar database, we only need a few fields –  symbol, price, and transaction_date – in order to complete the query. With a row store, we would gather additional data that was not needed for the query but was still part of the table structure.
-
-Normalization of data also makes updates to some information much more efficient in a row store. If you change an account holder’s address, you simply update the one record in the accounts table. The updated information is available to all transactions completed by that account owner. In the columnar database, since we might store the account information with the transactions of that user, many records might need updating in order update the available address information.
-
-
+**Normalization** of data also **makes updates** to some information much **more efficient** in a **row-oriented**. If you **change an account holder’s address, you simply update the one record in the accounts table**. The updated information is available to all transactions completed by that account owner. In the **columnar database**, since **we might store the account information with the transactions** of that user, **many records might need updating** in order update the available address information.
 
 
 
